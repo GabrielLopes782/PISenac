@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Doar Animais</title>
-  <link rel="stylesheet" type="text/css" href="estiloDoar.css" />
+  <link rel="stylesheet" type="text/css" href="../estiloDoar.css" />
 </head>
 
 <body>
@@ -15,7 +15,7 @@
     <h3>Página destinada a você que quer adotar um animalzinho</h3>
   </header>
   <?php
-  require_once './controller/cadCao.php';
+  require_once '../controller/cadCao.php';
   $cadCao = new cadCao();
   $listCao = $cadCao->getCao();
   ?>
@@ -24,7 +24,7 @@
       <nav>
         <ul>
           <li>
-            <a href="index.html">Home</a>
+            <a href="../index.html">Home</a>
           </li>
           <li>
             <a href="Adotar.php">Adotar</a>

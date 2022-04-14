@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doar Animais</title>
-    <link rel="stylesheet" type="text/css" href="estiloDoar.css" />
+    <link rel="stylesheet" type="text/css" href="../estiloDoar.css" />
   </head>
   <body>
     <header>
@@ -13,7 +13,7 @@
       <h3>Página destinada a você que quer doar seu animalzinho</h3>
     </header>
     <?php
-    require_once './controller/cadCao.php';
+    require_once '../controller/cadCao.php';
     $cadCao = new cadCao();
     ?>
     <div class="container">
@@ -21,7 +21,7 @@
         <nav>
           <ul>
             <li>
-              <a href="index.html">Home</a>
+              <a href="../index.html">Home</a>
             </li>
             <li>
               <a href="Adotar.php">Adotar</a>
@@ -35,7 +35,7 @@
       <div class="form">
         <form id="cadastrarCao" action="<?php $cadCao->inserirCao(); ?>" method="post">
           <label>Nome do Animal:</label>
-          <input type="text" id="nomePet" name="nomePet" required />
+          <input type="text" id="nomePet" name="nomePet" placeholder="Insira o nome do pet aqui..." required />
           <br />
           <label>Tipo De animal:</label>
           <select name="tpAnimal" id="tpAnimal">
@@ -45,7 +45,7 @@
           </select>
           <br />
           <label>Idade:</label>
-          <input type="text" id="idade" name="idade" />
+          <input type="text" id="idade" name="idade" placeholder="insira a idade do pet aqui..." />
           <br />
           <label>Porte:</label>
           <select name="porte" id="porte" name="porte">
@@ -56,10 +56,10 @@
           </select>
           <br />
           <label>O animalzinho é vacinado? Quais vacinas?</label>
-          <input type="text" id="vacina" name="vacina" />
+          <input type="text" id="vacina" name="vacina" placeholder="insira as vacinas que o pet tomou aqui..." />
           <br />
           <label>Raça:</label>
-          <input type="text" name="raca" id="raca" />
+          <input type="text" name="raca" id="raca" placeholder="insira a raça do pet aqui..." />
 
           <br />
           <label>Sexo:</label>

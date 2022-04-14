@@ -1,5 +1,5 @@
 <?php
-require_once './controller/cadCao.php';
+require_once '../controller/cadCao.php';
 $cadCao = new cadCao();
 $pet = null;
 if (isset($_POST['AdotarPet'])) {
@@ -7,13 +7,13 @@ if (isset($_POST['AdotarPet'])) {
 }
 ?>
 <?php
-require_once './controller/cadDono.php';
+require_once '../controller/cadDono.php';
 $cadDono = new cadDono();
 ?>
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="estiloAdotar.css" />
+        <link rel="stylesheet" type="text/css" href="../estiloAdotar.css" />
         <title>Adotar</title>
     </head>
     <h1>Adotar um Animalzinho </h1>
@@ -60,13 +60,13 @@ $cadDono = new cadDono();
     <div class="form" id="form">
         <form action="<?php $cadDono->inserirDono();?>" id="formDono" method="Post">
                 <label class="label">Seu Nome:</label>
-                <input type="text" id="nomeDono" name="nomeDono">
+                <input type="text" id="nomeDono" name="nomeDono" placeholder="Insira Seu Nome Aqui...">
                 <br>
                 <label class="label">Seu telefone:</label>
-                <input type="text" id="telefone" name="telefone">
+                <input type="text" id="telefone" name="telefone" placeholder="Insira seu telefone Aqui...">
                 <br>
                 <label class="label">Seu e-mail</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" placeholder="Insira seu e-mail Aqui...">
                 <br>
                 <input type="submit" value="Adotar!" name="Adotante" />
         </form>

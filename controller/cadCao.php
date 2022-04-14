@@ -16,7 +16,7 @@
             $img1=$_POST['img1'];
             $img2=$_POST['img2'];
             $img3=$_POST['img3'];
-            $pdo = require './pdo/connection.php';
+            $pdo = require '../pdo/connection.php';
             $sql = "insert into pet (nomePet, tpAnimal, idadePet, portePet, VacinaPet, racaPet, sexoPet, descricaoPet, img1, img2, img3) values (?,?,?,?,?,?,?,?,?,?,?)";
             $Statement = $pdo->prepare($sql);
             $Statement->bindParam(1, $nome, PDO::PARAM_STR);
@@ -31,14 +31,14 @@
             $Statement->bindParam(10, $img2, PDO::PARAM_LOB);
             $Statement->bindParam(11, $img3, PDO::PARAM_LOB);
             $Statement->execute();
-            header("location: index.html");
+            header("location: ../index.html");
             unset($Statement);
             unset($pdo);
         }
         
     }
     public function getCao() {
-        $pdo = require_once './pdo/connection.php';
+        $pdo = require_once '../pdo/connection.php';
         $sql = "select * from Pet ";
         $sth = $pdo->prepare($sql);
         $sth->execute();
@@ -54,7 +54,7 @@
     }
     
     public function getPetById($idPet) {
-        $pdo = require_once './pdo/connection.php';
+        $pdo = require_once '../pdo/connection.php';
         $sql = "select  idPet, nomePet, tpAnimal, idadePet, portePet, VacinaPet, racaPet, sexoPet, descricaoPet from pet where idPet= ?";
         $sth = $pdo->prepare($sql);
         $sth->execute([$idPet]);
