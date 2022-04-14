@@ -1,0 +1,82 @@
+body{
+margin: 0;
+border: 0;
+background-image:url(./img/doggo.png);
+background-repeat:no-repeat ;
+background-position: center;
+padding-bottom: 55px;
+}
+.form{
+        text-align: center;
+        align-items: center;
+        margin-left: -55px;
+        margin-top: 10px;
+        
+}
+#TbCao{
+    display: grid;
+    width: 15%;
+    align-items: center;
+    padding-left: 45%;
+}
+#formDono{
+    display: grid;
+    width: 15%;
+    align-items: center;
+    padding-left: 45%;
+    
+}
+h2{
+    text-align: center;
+}
+.label{
+    background-color: white;
+}
+input[type="submit"]:hover{
+    background-color:rgb(218, 69, 148);
+    transition: 400ms;
+    cursor: pointer;
+    
+    }
+    input[type="submit"]{
+        background-color: rgb(236, 154, 198);
+        padding: 5px;
+    }
+    nav{
+        text-align: center;
+        width: 100%;
+    }
+    
+    nav ul {
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: darkgray;
+    }
+    
+    nav li {
+        list-style-type: none; /* remove o marcador */
+        display: inline;
+        padding: 10px;
+    
+    }
+    
+    nav li a{
+        color:blue;
+        transition: 400ms;
+        text-decoration: none; /* remove sublinhado do link*/
+    }
+    
+    nav li a:hover{ /* passar o mouse em cima */
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+    
+    }
+    h1{
+        text-align: center;
+        background-color: rgb(218, 69, 148); 
+        color: white;
+        padding: 10px;
+
+    }
+    
